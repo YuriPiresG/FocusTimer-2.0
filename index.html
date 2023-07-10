@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>FocusTimer 2.0</title>
+  </head>
+  <body>
+    <main>
+      <div class="timerBox">
+        <div class="timerNumbers">
+          <span class="minutes">25</span>
+          <span>:</span>
+          <span class="seconds">00</span>
+        </div>
+        <div class="timerOptions">
+          <img
+            src="assets/play.svg"
+            class="playBtn"
+            alt="Representação gráfica de um botão de play"
+          />
+          <img
+            src="assets/pause.svg"
+            class="pauseBtn"
+            alt="Representação gráfica de um botão de pause"
+          />
+          <img
+            src="assets/plus.svg"
+            class="plusBtn"
+            alt="Representação gráfica de um botão de soma"
+          />
+          <img
+            src="assets/minus.svg"
+            class="minusBtn"
+            alt="Representação gráfica de um botão de subtração"
+          />
+        </div>
+      </div>
+      <div class="soundOptions">
+        <button class="forestBtn">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            id="Line"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="primary"
+              d="M3,21H21m-7.91-9.3a3,3,0,0,0,5.82,0,3.49,3.49,0,0,0,0-6.4,3,3,0,0,0-5.82,0,3.49,3.49,0,0,0,0,6.4ZM16,21V9M7,13V10A2,2,0,0,0,5,8H5a2,2,0,0,0-2,2v3a2,2,0,0,0,2,2H5A2,2,0,0,0,7,13ZM5,21V15"
+              stroke="#000000"
+              stroke-width="1.5"
+            ></path>
+          </svg>
+        </button>
+        <button class="storeBtn">
+          <?xml version="1.0" encoding="utf-8"?>
+
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Environment / Coffee">
+              <path
+                id="Vector"
+                d="M4 20H10.9433M10.9433 20H11.0567M10.9433 20C10.9622 20.0002 10.9811 20.0002 11 20.0002C11.0189 20.0002 11.0378 20.0002 11.0567 20M10.9433 20C7.1034 19.9695 4 16.8468 4 12.9998V8.92285C4 8.41305 4.41305 8 4.92285 8H17.0767C17.5865 8 18 8.41305 18 8.92285V9M11.0567 20H18M11.0567 20C14.8966 19.9695 18 16.8468 18 12.9998M18 9H19.5C20.8807 9 22 10.1193 22 11.5C22 12.8807 20.8807 14 19.5 14H18V12.9998M18 9V12.9998M15 3L14 5M12 3L11 5M9 3L8 5"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </g>
+          </svg>
+        </button>
+        <button class="fireBtn">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M20 13.1111C20 20.2222 13.9556 22 10.9333 22C8.28889 22 3 20.2222 3 13.1111C3 10.3295 4.46147 8.46138 5.85996 7.39454C6.63841 6.80069 7.6304 7.39197 7.73017 8.36598L7.816 9.20382C7.92052 10.2241 8.84932 11.0606 9.70932 10.5017C11.3938 9.40705 12 6.7752 12 5.33334V5.00971C12 3.58 13.4438 2.65985 14.6023 3.49767C17.1653 5.35127 20 8.58427 20 13.1111Z"
+              stroke="#000000"
+              stroke-width="1.5"
+            />
+            <path
+              d="M8 18.4445C8 21.2889 10.4889 22 11.7333 22C12.8222 22 15 21.2889 15 18.4445C15 17.3435 14.4107 16.6002 13.8404 16.1713C13.4424 15.872 12.8828 16.1408 12.7459 16.6196C12.5675 17.2437 11.9228 17.636 11.5944 17.0759C11.2941 16.5638 11.2941 15.7957 11.2941 15.3334C11.2941 14.6968 10.6539 14.2847 10.1389 14.6589C9.10649 15.4091 8 16.6815 8 18.4445Z"
+              stroke="#000000"
+              stroke-width="1.5"
+            />
+          </svg>
+        </button>
+        <button class="cloudBtn">
+          <?xml version="1.0" encoding="utf-8"?>
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22 13.3529C22 15.2939 21.0091 17.0061 19.5 18.0226M14.381 8.02721C14.9767 7.81911 15.6178 7.70588 16.2857 7.70588C16.9404 7.70588 17.5693 7.81468 18.1551 8.01498M7.11616 10.6089C6.8475 10.5567 6.56983 10.5294 6.28571 10.5294C3.91878 10.5294 2 12.4256 2 14.7647C2 16.0746 2.60178 17.2457 3.54704 18.0226M7.11616 10.6089C6.88706 9.9978 6.7619 9.33687 6.7619 8.64706C6.7619 5.52827 9.32028 3 12.4762 3C15.4159 3 17.8371 5.19371 18.1551 8.01498M7.11616 10.6089C7.68059 10.7184 8.20528 10.9374 8.66667 11.2426M18.1551 8.01498C18.8381 8.24853 19.4623 8.60648 20 9.06141"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 19L15 21"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M16 15.5L14 17.5"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M12 20L10 22"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M11.5 15.5L9.5 17.5"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M7.5 19L5.5 21"
+              stroke="#000000"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+      </div>
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>

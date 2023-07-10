@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+  height: 100vh;
+}
+.turnedOn {
+  background: #02799d;
+}
+
+.turnedOn svg path{
+    stroke: #fff;
+}
+
+img:hover, button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+img:active, button:active{
+    transform: scale(1);
+}
+
+.timerBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.7rem;
+  font-weight: 500;
+  color: #323238;
+}
+
+.timerNumbers {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timerOptions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.soundOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+svg {
+  width: 8rem;
+  height: 8rem;
+}
+button {
+  border: none;
+  background: #e1e1e6;
+  cursor: pointer;
+  width: 14rem;
+  height: 15rem;
+  border-radius: 4rem;
+}
