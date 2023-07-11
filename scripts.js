@@ -5,12 +5,21 @@ const minusBtn = document.querySelector(".minusBtn");
 
 let timerTimeOut;
 
+const sliderForest = document.querySelector(".sliderForest");
+const sliderStore = document.querySelector(".sliderStore");
+const sliderFire = document.querySelector(".sliderFire");
+const sliderCloud = document.querySelector(".sliderCloud");
+
+const sunBtn = document.querySelector(".sunBtn");
+const moonBtn = document.querySelector(".moonBtn");
+
 const minutesDisplay = document.querySelector(".minutes");
 const secondsDisplay = document.querySelector(".seconds");
 let minutes = Number(minutesDisplay.textContent);
 
 const storeAudio = new Audio("./assets/Cafeteria.wav");
 const storeBtn = document.querySelector(".storeBtn");
+
 
 const forestAudio = new Audio("./assets/Floresta.wav");
 const forestBtn = document.querySelector(".forestBtn");
@@ -20,6 +29,8 @@ const cloudBtn = document.querySelector(".cloudBtn");
 
 const fireAudio = new Audio("./assets/Lareira.wav");
 const fireBtn = document.querySelector(".fireBtn");
+
+const finishedSound = new Audio("./assets/finishedSound.wav");
 
 let isPlaying = false;
 
@@ -39,20 +50,42 @@ function activateBtn(className, audioFile) {
   }
 }
 
+function setVolume(audioFile, sliderName) {
+  audioFile.volume = sliderName.value / 100;
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+  sunBtn.classList.toggle("hide");
+  moonBtn.classList.toggle("hide");
+}
+
+sunBtn.addEventListener("click", () => {
+  toggleDarkMode();
+});
+
+moonBtn.addEventListener("click", () => {
+  toggleDarkMode();
+});
+
 storeBtn.addEventListener("click", () => {
   activateBtn(storeBtn, storeAudio);
+  setVolume(storeAudio, sliderStore);
 });
 
 forestBtn.addEventListener("click", () => {
   activateBtn(forestBtn, forestAudio);
+  setVolume(forestAudio, sliderForest);
 });
 
 fireBtn.addEventListener("click", () => {
   activateBtn(fireBtn, fireAudio);
+  setVolume(fireAudio, sliderFire);
 });
 
 cloudBtn.addEventListener("click", () => {
   activateBtn(cloudBtn, rainAudio);
+  setVolume(rainAudio, sliderCloud);
 });
 
 function updateTimerDisplay(minutes, seconds) {
@@ -67,7 +100,8 @@ function countdown() {
 
     updateTimerDisplay(minutes, 0);
 
-    if (minutes <= 0) {
+    if (minutes <= 0 && seconds <= 0) {
+      finishedSound.play();
       return;
     }
 

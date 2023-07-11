@@ -20,17 +20,29 @@ main {
   background: #02799d;
 }
 
-.turnedOn svg path{
-    stroke: #fff;
+.turnedOn svg path {
+  stroke: #fff;
 }
 
-img:hover, button:hover {
+.timerOptions svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+.timerOptions svg:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
 
-img:active, button:active{
-    transform: scale(1);
+img:hover,
+button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+img:active,
+button:active {
+  transform: scale(1);
 }
 
 .timerBox {
@@ -63,10 +75,12 @@ img:active, button:active{
   gap: 2rem;
   margin-top: 2rem;
 }
+
 svg {
   width: 8rem;
   height: 8rem;
 }
+
 button {
   border: none;
   background: #e1e1e6;
@@ -74,4 +88,65 @@ button {
   width: 14rem;
   height: 15rem;
   border-radius: 4rem;
+}
+
+.sunBtn {
+  background: transparent;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+
+.moonBtn {
+  background: transparent;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+
+.hide {
+  display: none;
+}
+
+.dark-mode {
+  background: #121214;
+  color: #fff;
+}
+
+.dark-mode button {
+  background: #29292e;
+}
+
+.dark-mode .timerBox {
+  color: #fff;
+}
+
+.dark-mode .soundOptions svg path {
+  stroke: #fff;
+}
+
+.dark-mode .turnedOn {
+  background: #0a3442;
+}
+
+.dark-mode .timerOptions svg path {
+  fill: #fff;
+}
+
+.dark-mode .moonBtn {
+  background: transparent;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+}
+
+.dark-mode .moonBtn svg path {
+  fill: #fff;
+}
+
+button input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
